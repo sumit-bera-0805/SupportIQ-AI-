@@ -1,0 +1,25 @@
+# environments / caches
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+.DS_Store
+# secrets
+.env
+.env.*
+*.pem
+secrets.toml
+.streamlit/secrets.toml
+# generated artefacts (SQLite run history, trained models)
+data/*.db
+data/*.sqlite*
+models/
+*.joblib
+*.pkl
+# user-uploaded / private datasets (the bundled demo CSV is the only data file tracked)
+data/*
+!data/sample_tickets.csv
+uploads/

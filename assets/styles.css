@@ -1,0 +1,39 @@
+/* SupportIQ design system. Colour tokens are injected per theme by src/ui.py (:root vars). */
+html, body, [class*="css"] { font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, "Inter", Roboto, sans-serif; }
+.stApp { background: var(--bg); color: var(--text); }
+[data-testid="stHeader"] { background: transparent; }
+[data-testid="stSidebar"] { background: var(--panel); border-right: 1px solid var(--border); }
+[data-testid="stSidebar"] * { color: var(--text); }
+.block-container { padding-top: 1.6rem; padding-bottom: 3rem; max-width: 1400px; }
+h1, h2, h3, h4, p, label, span, li { color: var(--text); }
+h1 { font-size: 1.7rem !important; font-weight: 650 !important; letter-spacing: -0.01em; }
+h2 { font-size: 1.25rem !important; font-weight: 600 !important; }
+h3 { font-size: 1.05rem !important; font-weight: 600 !important; }
+.muted { color: var(--muted) !important; font-size: .85rem; }
+.siq-hero { background: linear-gradient(135deg, var(--panel) 0%, var(--panel2) 100%); border: 1px solid var(--border); border-radius: 14px; padding: 18px 22px; margin-bottom: 14px; box-shadow: 0 4px 18px rgba(0,0,0,.12); }
+.siq-hero h1 { margin: 0 0 4px 0; }
+.siq-badge { display: inline-block; padding: 2px 10px; border-radius: 999px; font-size: .72rem; font-weight: 600; border: 1px solid var(--border); margin-right: 6px; }
+.siq-badge.demo { background: rgba(167,139,250,.16); color: var(--violet); border-color: rgba(167,139,250,.5); }
+.siq-badge.ok { background: rgba(34,211,238,.12); color: var(--cyan); border-color: rgba(34,211,238,.45); }
+.siq-badge.warn { background: rgba(251,191,36,.12); color: #d99a00; border-color: rgba(251,191,36,.5); }
+.siq-badge.bad { background: rgba(248,113,113,.12); color: var(--red); border-color: rgba(248,113,113,.5); }
+.siq-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; margin: 6px 0 14px 0; }
+.siq-card { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 13px 15px; box-shadow: 0 2px 10px rgba(0,0,0,.10); transition: border-color .15s ease, transform .15s ease; }
+.siq-card:hover { border-color: var(--blue); transform: translateY(-1px); }
+.siq-card .lbl { color: var(--muted); font-size: .76rem; text-transform: uppercase; letter-spacing: .04em; cursor: help; }
+.siq-card .val { font-size: 1.65rem; font-weight: 650; margin-top: 2px; color: var(--text); }
+.siq-card .val.na { font-size: 1.05rem; color: var(--muted); font-weight: 500; padding: 8px 0; }
+.siq-card .sub { font-size: .78rem; color: var(--muted); }
+.siq-card .up { color: var(--red); } .siq-card .down { color: var(--cyan); }
+.siq-note { border-left: 3px solid var(--blue); background: var(--panel); padding: 9px 13px; border-radius: 6px; font-size: .86rem; margin: 6px 0 10px 0; }
+.siq-note.warn { border-color: #d99a00; } .siq-note.model { border-color: var(--violet); } .siq-note.rule { border-color: var(--cyan); }
+.stButton > button, .stDownloadButton > button { border-radius: 9px; border: 1px solid var(--border); font-weight: 600; }
+.stButton > button[kind="primary"] { background: var(--blue); border-color: var(--blue); color: #fff; }
+div[data-testid="stDataFrame"] { border: 1px solid var(--border); border-radius: 10px; }
+@media (max-width: 768px) {
+  .block-container { padding: 1rem .7rem 2rem; }
+  h1 { font-size: 1.35rem !important; }
+  .siq-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .siq-card .val { font-size: 1.3rem; }
+}
+@media (prefers-reduced-motion: reduce) { .siq-card { transition: none; } }
